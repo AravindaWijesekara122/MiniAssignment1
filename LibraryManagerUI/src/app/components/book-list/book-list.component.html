@@ -1,0 +1,24 @@
+<div class="container">
+    <h3>Borrow a book</h3>
+    <div> <button (click)="logout()" class=" btn btn-danger"> Logout </button></div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of data">
+                <td>{{book.name}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.genre}}</td>
+                <td>
+                    <button type="button" class="btn btn-warning">Borrow</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
